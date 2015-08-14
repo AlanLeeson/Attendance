@@ -1,0 +1,14 @@
+<% students.each do |student| %>
+
+	<%= content_tag_for( :li, student, class: "course_student")do %>
+
+		<%= link_to student_path(student), class: "course_students" do%>
+	  		S – <%= student.fName %>
+		<% end %>
+	  	<div class="course_students_attendance" id="course_attendance_state_<%=Enrollment.where(Student_id: student.id, Course_id: @course.id, date: selectedDate.date).first.id%>">
+	  		<%= render template: "enrollments/toggle_attendance.html", locals: {enrollment: Enrollment.where(Student_id: student.id, Course_id: @course.id, date: selectedDate.date).first}%>
+		</div>
+
+	<% end %>
+
+<% end %>

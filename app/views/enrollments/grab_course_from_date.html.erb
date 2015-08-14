@@ -1,0 +1,9 @@
+ <%= form_for(enrollment, url: grab_course_from_date_enrollment_path(id: enrollment.id), remote: true) do |f| %>
+ 	<% if enrollment.date < Date.today %>
+ 		<%= submit_tag enrollment.date, class: "past_dates" %>
+ 	<% elsif enrollment.date > Date.today %>
+ 		<%= submit_tag enrollment.date, class: "future_dates" %> 
+ 	<% else %>
+ 		<%= submit_tag enrollment.date, id: "current_date" %> 
+ 	<% end %>
+ <% end %>

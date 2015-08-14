@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<div id="content_container">
+
+	<div id="course_header">
+
+		<p id="course_title">
+		  <%= @course.title %>
+		</p>
+
+		<p id="course_description"><%= @course.description %></p>
+
+	</div>
+
+	<ul id="course_attendance_sheet">
+
+	  <div id="course_dates">
+		  <% @dates.each do |date| %>
+			<div class="course_date">
+		  		<%= render template: "enrollments/grab_course_from_date.html", locals: {enrollment: date} %>
+		  	</div>
+		  <% end %>
+	  </div>
+
+	  <div id="course_date_students">
+	  	<% if !@today.blank? %>
+	  		<%= render template: "courses/display_students.html", locals: {course: @course, students: @studentsInCourse, selectedDate: @today} %>
+	  	<% else %>
+	  		there are no classes today.
+	  	<% end %>
+	  </div>
+
+	</ul>
+
+	<br>
+
+	<%= link_to 'Edit', edit_course_path(@course) %> |
+	<%= link_to 'Back', courses_path %>
+
+</div>

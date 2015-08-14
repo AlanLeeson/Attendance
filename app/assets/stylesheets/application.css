@@ -1,0 +1,151 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+*{margin:0;padding:0;}
+
+body {
+  background-color: #fefefe;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+
+a {
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+
+
+
+#container{
+	margin: 0 auto;
+}
+
+#courseContainer{
+	display:inline-block;
+	width:200px;
+	vertical-align: top;
+}
+
+#content_container{
+  width:700px;
+  margin:0 auto;
+}
+
+#course_header{
+  background-color:#333;
+  color:#fff;
+  padding:10px;
+}
+
+#course_title{
+  font-size:50px;
+  text-align: center;
+  font-weight:500;
+}
+
+#course_dates{
+  height:10px;
+  padding:10px;
+}
+
+.course_date{
+  float:left;
+  margin-right:5px;
+}
+
+#course_date_students{
+  margin-top:10px;
+  width:100%;
+}
+
+#course_attendance_sheet{
+  text-decoration: none;
+  list-style: none;
+}
+
+.course_students{
+  float:left;
+}
+
+.course_students_attendance{
+  float:right;
+}
+
+.course_student{
+  position:relative;
+  width:100%;
+  height:30px;
+  border-bottom:1px dotted #444;
+  margin-top:5px;
+}
+
+.course_student a{
+  text-decoration: none;
+  color:#000;
+}
+
+
+/* * * * * * * Styles for Dates * * * * * * */
+
+.past_dates{
+  background:#000;
+  color:#fff;
+}
+.future_dates{
+  background:#fff;
+  color:#000;
+}
+#current_date{
+  background:#00f;
+  color:#fff;
+}
+
+/* * * * * * * End Styles for Dates * * * * * * */
+
+
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+
+}

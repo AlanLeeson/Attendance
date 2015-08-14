@@ -1,0 +1,7 @@
+ <%= form_for(enrollment, url: toggle_attendance_enrollment_path(id: enrollment.id), remote: true) do |f| %>
+ 	<% if enrollment.status == 0 %>
+ 		<%= submit_tag "Absent" %> 
+ 	<% else %> 
+ 		<%= submit_tag "Present" %>
+ 	<% end %>
+ <% end %>

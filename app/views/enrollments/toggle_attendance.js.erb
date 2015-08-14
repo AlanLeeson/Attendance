@@ -1,0 +1,1 @@
+$('#course_attendance_state_<%=@enrollment.id%>').html('<%= escape_javascript(render template: "/enrollments/toggle_attendance.html", locals: {enrollment: @enrollment})%>');
